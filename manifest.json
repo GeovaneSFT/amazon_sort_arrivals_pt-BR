@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Order Sorter",
+  "version": "1.0",
+  "description": "Exibe os pedidos entregues hoje primeiro na página de pedidos da Amazon.",
+  "icons": {
+    "24": "icon24.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com.br/gp/css/order-history*", "https://www.amazon.com.br/your-orders*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
